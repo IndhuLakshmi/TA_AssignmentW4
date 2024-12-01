@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>TestNG:  CreateLeadTest_Playwright_Firefox</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>CreateLeadTest_Playwright_Firefox</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Nov 28 17:55:30 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>43 seconds (43359 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.TC002_EditLead.runEditLead()'><b>runEditLead</b><br>Test class: testcases.TC002_EditLead<br>Parameters: Babu, Qeagle</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/progress.js:78:26)
+    at Frame.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/frames.js:1013:23)
+    at FrameDispatcher.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator(&quot;xpath=(//div[@class=&apos;x-grid3-cell-inner x-grid3-col-partyId&apos;]/a)[1]&quot;).first()
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2413)
+	at com.testleaf.web.element.PwLinkImpl.click(PwLinkImpl.java:13)
+	at pages.FindLeadPage.clickFirstLead(FindLeadPage.java:70)
+	at testcases.TC002_EditLead.runEditLead(TC002_EditLead.java:23)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/progress.js:78:26)
+    at Frame.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/frames.js:1013:23)
+    at FrameDispatcher.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator(&quot;xpath=(//div[@class=&apos;x-grid3-cell-inner x-grid3-col-partyId&apos;]/a)[1]&quot;).first()
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 29 more
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1606276584", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1606276584'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/progress.js:78:26)
+    at Frame.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/frames.js:1013:23)
+    at FrameDispatcher.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator(&quot;xpath=(//div[@class=&apos;x-grid3-cell-inner x-grid3-col-partyId&apos;]/a)[1]&quot;).first()
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
+	at com.microsoft.playwright.Locator.click(Locator.java:2413)
+	at com.testleaf.web.element.PwLinkImpl.click(PwLinkImpl.java:13)
+	at pages.FindLeadPage.clickFirstLead(FindLeadPage.java:70)
+	at testcases.TC002_EditLead.runEditLead(TC002_EditLead.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/progress.js:78:26)
+    at Frame.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/frames.js:1013:23)
+    at FrameDispatcher.click (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (/private/var/folders/f1/lng7fy451dq7fxr4j_f2272m0000gn/T/playwright-java-16838200599598009178/package/lib/server/dispatchers/dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator(&quot;xpath=(//div[@class=&apos;x-grid3-cell-inner x-grid3-col-partyId&apos;]/a)[1]&quot;).first()
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 29 more
+</pre></div></td>
+<td>31</td>
+<td>testcases.TC002_EditLead@738dc9b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testcases.TC001_CreateLead.runCreateLead()'><b>runCreateLead</b><br>Test class: testcases.TC001_CreateLead<br>Parameters: Qeagle, Hari, R, 99</td>
+<td></td>
+<td>4</td>
+<td>testcases.TC001_CreateLead@3012646b</td></tr>
+<tr>
+<td title='testcases.TC003_DuplicateLead.runDuplicateLead()'><b>runDuplicateLead</b><br>Test class: testcases.TC003_DuplicateLead<br>Parameters: 99</td>
+<td></td>
+<td>6</td>
+<td>testcases.TC003_DuplicateLead@d86a6f</td></tr>
+<tr>
+<td title='testcases.TC004_DeleteLead.runDeleteLead()'><b>runDeleteLead</b><br>Test class: testcases.TC004_DeleteLead<br>Parameters: 99</td>
+<td></td>
+<td>3</td>
+<td>testcases.TC004_DeleteLead@3646a422</td></tr>
+</table><p>
+</body>
+</html>
